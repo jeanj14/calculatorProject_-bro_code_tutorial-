@@ -1,23 +1,35 @@
 body{
     margin: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     height: 100vh;
     background-color: hsl(0, 0%, 95%);
 }
 
+header{
+    width: 100%;
+    margin: auto;
+}
+
+#title{
+    font-family: Arial, sans-serif;
+    text-align: center;
+    font-size: 2rem;
+}
+
 #calculator{
+    position: relative;
     font-family: Arial, sans-serif;
     background-color: hsl(0, 0%, 15%);
     border-radius: 15px;
-    max-width: 500px;
+    margin: auto;
+    max-width: min-content;
     overflow: hidden;
 }
 
 #display{
     width: 100%;
-    padding: 20px;
+    padding: 10px;
     font-size: 5rem;
     text-align: left;
     border: none;
@@ -35,8 +47,8 @@ body{
 
 
 button{
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     border-radius: 50px;
     border: none;
     background-color: hsl(0, 0%, 30%);
@@ -44,6 +56,28 @@ button{
     font-size: 3rem;
     font-weight: bold;
     cursor: pointer;
+
+}
+
+@media only screen and (max-width: 412px){
+    body {
+        
+    }
+
+    header{
+        width: auto;
+    }
+    
+    button {
+        width: 55px;
+        height: 55px;
+        font-size: 1.5rem;
+    }
+
+    #display{
+        font-size: 2.5rem;
+    }
+    
 
 }
 
